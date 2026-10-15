@@ -6,8 +6,10 @@
     <title>Thrive | Age Gate Demo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Site fonts (Montserrat) — include if the host site doesn't already load them -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
 
+    <!-- COPY INTO SITE: 1) script tag in <head> -->
     <script src="https://unpkg.com/@jmeirinkmarimed/age-gate@1.0.38/dist/age-gate.min.js"></script>
   </head>
   <body>
@@ -17,6 +19,7 @@
       <button onclick="localStorage.removeItem('ageVerified'); window.location.reload();">Remove age verified</button>
     </main>
 
+    <!-- COPY INTO SITE: 2) this <age-gate> element (place near the end of <body>) -->
     <age-gate
       min-age="21"
       confirmation-type="dateInputs"
