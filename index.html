@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thrive | Age Gate Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
 
     <script src="https://unpkg.com/@jmeirinkmarimed/age-gate@1.0.38/dist/age-gate.min.js"></script>
   </head>
@@ -11,13 +14,24 @@
     <main>
       <h1>Thrive Age Gate Demo</h1>
       <p>This is a demonstration of the Thrive age verification.</p>
+      <button onclick="localStorage.removeItem('ageVerified'); window.location.reload();">Remove age verified</button>
     </main>
 
     <age-gate
       min-age="21"
-      confirmation-type="yesNo"
-      header-text="Are you 21 or older?"
-      sub-header-text="Please confirm your age to continue."
+      confirmation-type="dateInputs"
+      header-text="Welcome!"
+      sub-header-text="Please verify you are over 21 years of age or a qualifying medical patient."
+      confirm-button-text="Submit"
+      text-color="#000000"
+      button-color="#3F5F42"
+      button-text-color="#ffffff"
+      button-hover-color="#2C422E"
+      button-hover-text-color="#ffffff"
+      font-family="Montserrat, sans-serif"
+      logo="https://thrivedispensaries.com/wp-content/uploads/2026/02/Thrive-Brand-Logo-3C-Horiz@2x-resized.png"
+      logo-width="360px"
+      background-color="rgba(255, 255, 255, 0.9)"
     ></age-gate>
   </body>
 </html>
